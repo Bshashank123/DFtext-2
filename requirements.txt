@@ -1,0 +1,39 @@
+# DFText — AI Handwriting Forgery Detector
+# Core dependencies for the micro-texture forensic pipeline
+
+# Web framework
+Flask==2.3.3
+Werkzeug==2.3.7
+
+# Image processing
+opencv-python==4.8.0.76
+Pillow==10.0.0
+
+# Numerical & scientific
+numpy==1.24.3
+scipy==1.11.2
+
+# Image feature extraction
+scikit-image==0.21.0
+
+# Machine learning (Isolation Forest)
+scikit-learn==1.3.0
+
+# Text region detection
+easyocr==1.7.0
+
+# Visualization
+matplotlib==3.7.2
+
+# ──────────────────────────────────────────────────
+# REMOVED (weak signals on OCR output):
+#   transformers     — AI text detection
+#   torch            — required by transformers
+#   pytesseract      — OCR for text analysis
+#   nltk             — stylometry
+#
+# REPLACED BY:
+#   scikit-image     — LBP texture features
+#   scikit-learn     — Isolation Forest anomaly detection
+#   easyocr          — text region LOCATION only (bounding boxes)
+# ──────────────────────────────────────────────────
